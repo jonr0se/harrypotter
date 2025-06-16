@@ -1,0 +1,122 @@
+/* General Body & HTML - Like old parchment */
+body {
+    font-family: 'Times New Roman', serif; /* Classic, somewhat old-fashioned font */
+    background-color: #f0e6c8; /* Light parchment color */
+    color: #3e2723; /* Dark brown, ink-like text */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-image: url('images/parchment_texture.png'); /* Imagine a subtle parchment texture here */
+    background-repeat: repeat;
+}
+
+/* Header - Daily Prophet banner */
+.wiz-header {
+    text-align: center;
+    border-bottom: 3px double #8d6e63; /* Double line for a newspaper feel */
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.wiz-header h1 {
+    font-family: 'Georgia', serif; /* Stronger font for the title */
+    font-size: 3.5em;
+    color: #4e342e; /* Darker brown */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    margin-bottom: 5px;
+}
+
+.wiz-date {
+    font-style: italic;
+    color: #795548; /* Lighter brown for date */
+    font-size: 0.9em;
+}
+
+/* Main Content Area - News column layout */
+.wiz-main {
+    display: flex; /* Flexbox for column layout */
+    gap: 30px; /* Space between columns */
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff8e1; /* Slightly lighter background for content */
+    padding: 25px;
+    border: 1px solid #d7ccc8; /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.wiz-section {
+    flex: 3; /* Main news section takes more space */
+}
+
+.wiz-sidebar {
+    flex: 1; /* Sidebar takes less space */
+    background-color: #fbe9e7; /* Even lighter background for sidebar */
+    padding: 15px;
+    border-left: 1px dashed #d7ccc8; /* Dashed line for separation */
+}
+
+.wiz-section h2, .wiz-sidebar h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+    color: #5d4037; /* A richer brown */
+    margin-top: 0;
+    border-bottom: 1px solid #bcaaa4; /* Subtle line under headings */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.wiz-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #8d6e63; /* Frame around images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons - Magical interactive elements */
+.wiz-button {
+    background-color: #4a2d07; /* Dark wizard robe color */
+    color: #ffe082; /* Golden snitch color */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wiz-button:hover {
+    background-color: #6d4c41; /* Slightly lighter brown on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.wiz-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer - Ministry notices */
+.wiz-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #d7ccc8;
+    font-size: 0.8em;
+    color: #795548;
+}
+
+/* Responsive adjustments for smaller screens (like a smaller scroll) */
+@media (max-width: 768px) {
+    .wiz-main {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+    .wiz-sidebar {
+        border-left: none; /* Remove left border when stacked */
+        border-top: 1px dashed #d7ccc8; /* Add top border instead */
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
